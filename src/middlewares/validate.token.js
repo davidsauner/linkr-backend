@@ -18,3 +18,4 @@ export async function validateToken(req, res, next) {
     res.status(500).send(error);
   }
 }
+
