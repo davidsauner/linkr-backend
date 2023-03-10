@@ -7,7 +7,7 @@ export async function validateToken(req, res, next) {
 
     if (!token) return res.sendStatus(401);
 
-    const session = await getSession(token)
+    const session = await getSession(token);
     if (session.rows.length == 0) return res.sendStatus(401);
 
     res.locals = session.rows[0].userId;
@@ -18,3 +18,4 @@ export async function validateToken(req, res, next) {
     res.status(500).send(error);
   }
 }
+
