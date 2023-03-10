@@ -18,7 +18,7 @@ export async function signUp (req, res) {
       await db.query(`
         INSERT INTO user (email, password, username, pictureurl)
         VALUES ($1, $2, $3, $4)
-      `, [email, password, username, pictureurl])
+      `, [email, passwordHash, username, pictureurl])
   
       res.sendStatus(201)
   
