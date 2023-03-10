@@ -6,6 +6,6 @@ import { homeSchema } from "../schemas/home.schema.js";
 const Homeroutes = Router();
 
 Homeroutes.get("/",getPosts)
-Homeroutes.post("/",validateSchema(homeSchema),postPosts)
+Homeroutes.post("/",postPosts)
 
 export default Homeroutes;
