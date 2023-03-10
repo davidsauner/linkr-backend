@@ -5,7 +5,7 @@ import { homeSchema } from "../schemas/home.schema.js";
 
 const Homeroutes = Router();
 
-Homeroutes.get("/",getPosts)
-Homeroutes.post("/",postPosts)
+Homeroutes.get("/posts",getPosts)
+Homeroutes.post("/posts",postPosts)
 
 export default Homeroutes;
