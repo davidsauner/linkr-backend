@@ -88,11 +88,11 @@ ALTER SEQUENCE public.likes_id_seq OWNED BY public.likes.id;
 
 CREATE TABLE public.posts (
     id integer NOT NULL,
-    "tagId" integer NOT NULL,
+    "tagId" integer,
     url character varying(255) NOT NULL,
     content text NOT NULL,
     "userId" integer NOT NULL,
-    "likesId" integer NOT NULL
+    "likesId" integer
 );
 
 
@@ -181,6 +181,17 @@ ALTER TABLE ONLY public."user" ALTER COLUMN id SET DEFAULT nextval('public.user_
 -- Data for Name: hashtags; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.hashtags VALUES (1, 'maconha', 3);
+INSERT INTO public.hashtags VALUES (2, 'maskara', 1);
+INSERT INTO public.hashtags VALUES (3, 'daytona', 1);
+INSERT INTO public.hashtags VALUES (4, 'mlk', 1);
+INSERT INTO public.hashtags VALUES (5, 'vasco', 10);
+INSERT INTO public.hashtags VALUES (6, 'ps4', 1);
+INSERT INTO public.hashtags VALUES (7, 'lasanha', 1);
+INSERT INTO public.hashtags VALUES (8, 'netflix', 1);
+INSERT INTO public.hashtags VALUES (9, 'driven', 1);
+INSERT INTO public.hashtags VALUES (10, 'gta', 1);
+INSERT INTO public.hashtags VALUES (11, 'ubisoft', 4);
 
 
 --
@@ -205,7 +216,7 @@ ALTER TABLE ONLY public."user" ALTER COLUMN id SET DEFAULT nextval('public.user_
 -- Name: hashtags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.hashtags_id_seq', 1, false);
+SELECT pg_catalog.setval('public.hashtags_id_seq', 11, true);
 
 
 --
@@ -219,7 +230,7 @@ SELECT pg_catalog.setval('public.likes_id_seq', 1, false);
 -- Name: posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.posts_id_seq', 1, false);
+SELECT pg_catalog.setval('public.posts_id_seq', 3, true);
 
 
 --
