@@ -4,6 +4,6 @@ import { getTrending, getTaggedPosts } from "../controllers/tag.controllers.js";
 const TagRoutes = Router();
 
 TagRoutes.get("/trending", getTrending);
-TagRouter.get("/hashtag/:id", getTaggedPosts);
+TagRoutes.get("/hashtag/:id", getTaggedPosts);
 
 export default TagRoutes;
